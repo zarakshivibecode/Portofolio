@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khadiq Zarkasy - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="float-shape shape-1"></div>
+        <div class="float-shape shape-2"></div>
+        <div class="float-shape shape-3"></div>
+        <div class="float-shape shape-4"></div>
+        <div class="float-shape shape-5"></div>
+    </div>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-text">KZ</span>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="loading-animation">
+                <div class="morphing-shape"></div>
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+            <p class="loading-text">Initializing Experience...</p>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Zrksy</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-greeting">Hello, I'm</div>
+            <h1 class="hero-title" id="typed-text"></h1>
+            <p class="hero-subtitle">Code Weaver & Digital Alchemist</p>
+            <p class="hero-description">Transforming ideas into immersive digital experiences through the art of programming</p>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button primary">Explore My Work</a>
+                <a href="#contact" class="cta-button secondary">Let's Connect</a>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="animated-bg"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-mouse-tracker"></div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Section Transition -->
+    <div class="section-transition transition-1">
+        <div class="transition-shape"></div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-header">
+                <h2 class="section-title">The Journey</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-story">
+                    <div class="story-text">
+                        <p class="story-intro">In the quiet corners of code, I find my voice.</p>
+                        <p>I'm Khadiq Zarkasy, a student navigating the vast digital landscape. What began as curiosity about how websites work has evolved into a passion for crafting meaningful digital experiences. Each line of code is a brushstroke in my ongoing masterpiece.</p>
+                        <p>My approach blends technical precision with creative vision, transforming complex problems into elegant solutions. When I'm not coding, you'll find me exploring the intersection of technology and human experience.</p>
+                    </div>
+                    <div class="story-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Curiosity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h3 class="skills-title">Technical Arsenal</h3>
+                    <div class="skill-categories">
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon">⚛️</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">React</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">🎨</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">CSS/SCSS</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">📱</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">Responsive Design</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend & Tools</h4>
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon">⚙️</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">C++</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">🗄️</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">SQL</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon">🎯</div>
+                                    <div class="skill-info">
+                                        <span class="skill-name">Problem Solving</span>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Transition -->
+    <div class="section-transition transition-2">
+        <div class="transition-particles">
+            <div class="particle-dot"></div>
+            <div class="particle-dot"></div>
+            <div class="particle-dot"></div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h2 class="section-title">Digital Creations</h2>
+                <p class="section-subtitle">A showcase of my journey through code</p>
+                <div class="title-accent"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">🐍</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link live">Live Demo</a>
+                                <a href="#" class="project-link code">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Interactive Game</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3>Neural Snake</h3>
+                        <p>A modern twist on the classic snake game, featuring smooth animations, particle effects, and responsive controls. Built with HTML5 Canvas for optimal performance.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">Canvas</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Game Dev</span>
+                        </div>
+                        <a href="#" class="project-btn ripple">Explore Project</a>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-image">
+                        <div class="placeholder">🌟</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link live">Live Demo</a>
+                                <a href="#" class="project-link code">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Portfolio</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3>Cyber Portfolio</h3>
+                        <p>An immersive portfolio experience featuring advanced animations, particle systems, and glassmorphism design. A showcase of modern web development techniques.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Animations</span>
+                            <span class="tag">UX/UI</span>
+                        </div>
+                        <a href="#" class="project-btn ripple">Explore Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">📋</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link live">Live Demo</a>
+                                <a href="#" class="project-link code">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Productivity App</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3>TaskFlow Pro</h3>
+                        <p>A sophisticated task management application with drag-and-drop functionality, local storage, and a clean, intuitive interface. Features CRUD operations and responsive design.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">LocalStorage</span>
+                            <span class="tag">Drag & Drop</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <a href="#" class="project-btn ripple">Explore Project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <p>Ready to bring your ideas to life?</p>
+                <a href="#contact" class="cta-button primary">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Transition -->
+    <div class="section-transition transition-3">
+        <div class="wave-transition"></div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate on something amazing?</p>
+                <div class="title-accent"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3>Get In Touch</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hello, I'd love to hear from you.</p>
+                        <div class="contact-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">⚡</div>
+                                <span>Fast Response</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🎯</div>
+                                <span>Focused Solutions</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🚀</div>
+                                <span>Quality First</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link github">
+                            <span class="social-icon">🐙</span>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                        <a href="#" class="social-link linkedin">
+                            <span class="social-icon">💼</span>
+                            <span class="social-text">LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link email">
+                            <span class="social-icon">✉️</span>
+                            <span class="social-text">Email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header">
+                            <h3>Send a Message</h3>
+                            <p>Fill out the form below and I'll get back to you soon.</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="submit-btn ripple">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">🚀</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">KZ</h3>
+                    <p class="footer-tagline">Code Weaver & Digital Alchemist</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Khadiq Zarkasy. Crafted with passion and precision.</p>
+                <div class="footer-accent">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!-- 
+    PROJECT CARD IMAGE CONTAINER DOCUMENTATION
+    ============================================
+    
+    Komponen yang siap pakai untuk portfolio modern dengan efek hover yang smooth.
+    
+    FITUR UTAMA:
+    ✓ Image container responsive (100% width, object-fit cover)
+    ✓ Efek hover: zoom gambar + overlay gelap
+    ✓ Tombol "Live Demo" dan "View Code" dengan animasi
+    ✓ Rounded corners modern
+    ✓ Positioning absolute untuk overlay
+    ✓ Smooth transitions dan animations
+    ✓ Mobile responsive
+    ✓ Accessibility support
+    ✓ Tidak memerlukan JavaScript
+    
+    INTEGRASI:
+    1. Tambahkan CSS dari project-card-styles.css ke file style.css Anda
+    2. Gunakan struktur HTML di bawah sebagai template
+    3. Sesuaikan src gambar, link, dan teks sesuai kebutuhan
+    
+    STRUKTUR CLASS:
+    - .project-card          : Container utama kartu project
+    - .project-image         : Wadah gambar (image container)
+    - .project-img           : Element gambar
+    - .project-overlay       : Overlay gelap yang muncul saat hover
+    - .project-links         : Container tombol link
+    - .project-link          : Link/tombol individual
+    - .demo-link             : Class untuk tombol "Live Demo"
+    - .code-link             : Class untuk tombol "View Code"
+    - .project-info          : Wadah informasi project (judul, deskripsi, tags)
+    - .project-title         : Judul project
+    - .project-description   : Deskripsi project
+    - .project-tags          : Container tags
+    - .tag                   : Individual tag item
+    - .projects-grid         : Grid container untuk multiple projects
+
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Card Component - Demo</title>
+    <!-- Link CSS Component -->
+    <link rel="stylesheet" href="project-card-styles.css">
+    <style>
+        /* Global Styles untuk Demo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-header {
+            text-align: center;
+            margin: 60px 0 40px;
+            padding: 20px;
+        }
+
+        .demo-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #00ffff, #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .demo-header p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+        }
+
+        .demo-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #00ffff;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: rgba(0, 255, 255, 0.05);
+            border-left: 4px solid #00ffff;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <!-- Header -->
+        <div class="demo-header">
+            <h1>Project Card Image Container</h1>
+            <p>Modern, responsive project showcase component untuk portfolio</p>
+        </div>
+
+        <!-- Demo Section: Single Card -->
+        <div class="demo-section">
+            <h2 class="section-title">1. Single Project Card</h2>
+            
+            <div class="project-card" style="max-width: 400px;">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400?text=Amazing+Project" alt="Amazing Project" class="project-img">
+                    <div class="project-overlay"></div>
+                    <div class="project-links">
+                        <a href="#" class="project-link demo-link">Live Demo</a>
+                        <a href="#" class="project-link code-link">View Code</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Amazing Project</h3>
+                    <p class="project-description">A responsive web application built with modern technologies and best practices</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <code>&lt;div class="project-card"&gt;
+    &lt;div class="project-image"&gt;
+        &lt;img src="image.jpg" alt="..." class="project-img"&gt;
+        &lt;div class="project-overlay"&gt;&lt;/div&gt;
+        &lt;div class="project-links"&gt;
+            &lt;a href="#" class="project-link demo-link"&gt;Live Demo&lt;/a&gt;
+            &lt;a href="#" class="project-link code-link"&gt;View Code&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="project-info"&gt;
+        &lt;h3 class="project-title"&gt;Project Name&lt;/h3&gt;
+        &lt;p class="project-description"&gt;Description...&lt;/p&gt;
+        &lt;div class="project-tags"&gt;
+            &lt;span class="tag"&gt;Tech&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+            </div>
+        </div>
+
+        <!-- Demo Section: Grid Layout -->
+        <div class="demo-section">
+            <h2 class="section-title">2. Projects Grid (Multiple Cards)</h2>
+            
+            <section class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=E-Commerce+Platform" alt="E-Commerce Platform" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">Full-stack e-commerce solution dengan payment integration dan real-time inventory management</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Task+Management+App" alt="Task Management App" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">Aplikasi kolaboratif untuk manajemen tugas dengan real-time updates dan notifications</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">TailwindCSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Portfolio+Website" alt="Portfolio Website" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">Portfolio pribadi dengan animated hero section, smooth scroll, dan modern design</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Social+Media+Clone" alt="Social Media Clone" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Social Media Clone</h3>
+                        <p class="project-description">Platform media sosial dengan feed, messaging, dan user authentication</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Weather+App" alt="Weather App" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-description">Aplikasi cuaca real-time dengan lokasi geografis dan forecast mingguan</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">API Weather</span>
+                            <span class="tag">Geolocation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Analytics+Dashboard" alt="Analytics Dashboard" class="project-img">
+                        <div class="project-overlay"></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link demo-link">Live Demo</a>
+                            <a href="#" class="project-link code-link">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">Dashboard analitik dengan visualisasi data interaktif dan real-time metrics</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Info Section -->
+        <div class="demo-section">
+            <h2 class="section-title">3. Fitur & Karakteristik</h2>
+            
+            <div class="info-box">
+                <strong>📱 Responsive Design</strong><br>
+                Komponen ini fully responsive dan cocok untuk semua ukuran layar. Menggunakan CSS Grid dengan auto-fit untuk adaptasi otomatis.
+            </div>
+
+            <div class="info-box">
+                <strong>🎨 Modern Styling</strong><br>
+                Desain modern dengan gradient, glassmorphism effect, dan color scheme yang cocok untuk portfolio developer (cyber/neon theme).
+            </div>
+
+            <div class="info-box">
+                <strong>✨ Smooth Animations</strong><br>
+                Menggunakan cubic-bezier untuk animasi yang natural dan smooth. Efek hover mencakup zoom gambar, overlay transition, dan button effects.
+            </div>
+
+            <div class="info-box">
+                <strong>♿ Accessibility</strong><br>
+                Support untuk keyboard navigation, focus states, dan prefers-reduced-motion untuk pengguna yang sensitif terhadap animasi.
+            </div>
+
+            <div class="info-box">
+                <strong>⚡ Performance</strong><br>
+                CSS-only animations (no JavaScript) menghasilkan performance yang excellent. Menggunakan transform dan opacity untuk optimal rendering.
+            </div>
+        </div>
+
+        <!-- Customization Section -->
+        <div class="demo-section">
+            <h2 class="section-title">4. Customization Tips</h2>
+            
+            <div class="info-box">
+                <strong>🎯 Mengubah Warna:</strong><br>
+                Ganti nilai warna #00ffff (cyan) dengan warna pilihan Anda. Utama ditemukan di: overlay color, link buttons, borders, dan text-shadow.
+            </div>
+
+            <div class="info-box">
+                <strong>📐 Mengubah Ukuran:</strong><br>
+                Aspect ratio image container: <code style="background: rgba(0,255,255,0.1); padding: 2px 6px;">aspect-ratio: 16 / 10</code> (ubah untuk ratio berbeda)<br>
+                Border radius: ubah nilai pada .project-card dan .project-img
+            </div>
+
+            <div class="info-box">
+                <strong>🔧 Mengubah Animasi:</strong><br>
+                Kecepatan transition default: 0.4s. Ubah di CSS untuk kecepatan berbeda.<br>
+                Transform effects: scale(1.08) untuk zoom strength, translateY(-8px) untuk card lift.
+            </div>
+
+            <div class="info-box">
+                <strong>🏷️ Menambah/Mengurangi Links:</strong><br>
+                Tambah atau kurangi <code style="background: rgba(0,255,255,0.1); padding: 2px 6px;">&lt;a&gt;</code> tag di .project-links sesuai kebutuhan.
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
